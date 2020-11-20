@@ -1,5 +1,8 @@
 # Home Assistant Custom Components
 
+[![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/custom-components/hacs) [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
+[![Discord](https://img.shields.io/discord/330944238910963714?label=discord)](https://discord.gg/b25Yyh24)
+
 Custom Components for [Home Assistant](http://www.home-assistant.io).
 
 ## Microsoft Graph API Component
