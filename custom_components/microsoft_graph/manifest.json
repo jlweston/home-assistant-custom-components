@@ -1,5 +1,6 @@
 {
   "domain": "microsoft_graph",
+  "version": "1.0.0",
   "name": "Microsoft Graph",
   "config_flow": true,
   "documentation": "https://www.home-assistant.io/integrations/microsoft_graph",
