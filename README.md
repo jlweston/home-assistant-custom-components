@@ -21,7 +21,20 @@ Home Assistant authenticates with Microsoft through OAuth2. Set up your credenti
     - [Sensor](#sensor)
       - [Microsoft Teams](#microsoft-teams)
 
-### Installation
+### Installation 
+
+You can use [Home Assistant Community Store](https://hacs.xyz/) or perform a manual installation.
+
+#### HACS Installation
+
+With [Home Assistant Community Store](https://hacs.xyz/) installed, you can easily install this custom component via the UI.
+
+- Add `https://github.com/jlweston/home-assistant-custom-components` as a custom repository in HACS
+- Search for `Microsoft Graph` in the integration and install it.
+- Restart Home Assistant to pick up the new integration.
+- Configure with config below.
+
+#### Manual installation
 
 - If it doesn't already exist, create a directory called `microsoft_graph` under `config/custom_components/`.
 - Copy all files in `custom_components/microsoft_graph` to your `config/custom_components/microsoft_graph/` directory.
@@ -38,9 +51,9 @@ You will need to register an application in Azure AD and retrieve the client ID 
   - For Redirect URI, add: `https://<EXTERNAL_HOME_ASSISTANT_URL>/auth/external/callback`
 - Copy your Application (client) ID for later use
 - On the App Page, navigate to "Certificates & secrets"
-  - Generate a new client secret and *save for later use* (you will *not* be able to see this again)
+  - Generate a new client secret and *save the value for later use* (you will *not* be able to see this again)
 
-Then set the relevant permissions on the application on the API Permissions page. All of the following are required to function correctly:
+Then set the relevant permissions on the application on the API Permissions page. These permissions are found under "Microsoft Graph > Delegated permissions". All of the following are required to function correctly:
 
 - Presence.Read
 - Presence.Read.All
@@ -53,7 +66,7 @@ Add the client id and secret to your `configuration.yaml`:
 # Example configuration.yaml entry
 microsoft_graph:
   client_id: YOUR_CLIENT_ID
-  client_secret: YOUR_CLIENT_SECRET
+  client_secret: YOUR_CLIENT_SECRET_VALUE
 ```
 
 Finish setup in the UI through **Configuration -> Integrations -> Microsoft Graph**.
